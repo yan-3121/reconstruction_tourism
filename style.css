@@ -1,0 +1,573 @@
+/* Base styles */
+:root {
+    --custom-text: #4a5568;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f9fafb;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--custom-text);
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header */
+  .header {
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+  }
+  
+  .logo {
+    height: 2.5rem;
+    width: auto;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    width: 100%;
+    height: 100%;
+    background-image: url('../tourism/assets/sukagawa__overview.png');
+    background-size: cover;
+    background-position: center 40%;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .hero-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  
+  .hero-subtitle {
+    text-align: center;
+  }
+  
+  .hero-subtitle p {
+    color: white;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 4rem 1rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .description {
+    max-width: 42rem;
+    margin: 0 auto 4rem;
+    text-align: center;
+  }
+  
+  .description p {
+    color: #4b5563;
+    line-height: 1.7;
+  }
+  
+  /* Courses Section */
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--custom-text);
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Card styles */
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+  }
+  
+  .card {
+    background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 100%;
+  }
+  
+  .card-link:hover .card {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover .card-image img {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    position: relative;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .card-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--custom-text);
+  }
+  
+  .card-subtitle {
+    color: #4b5563;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-description {
+    font-size: 0.875rem;
+    color: #4b5563;
+    white-space: pre-line;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #f3f4f6;
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    text-align: center;
+    color: var(--custom-text);
+  }
+
+  /* モデルコースとお申込みセクションのスタイル */
+
+/* モデルコース共通スタイル */
+.model-courses-section,
+.booking-section {
+  margin: 5rem 0;
+  padding: 2rem 0;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+/* モデルコース */
+.course-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.course-main-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* color: #1a202c; */
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #edf2f7;
+}
+
+.course-note {
+  font-size: 0.875rem;
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.day-container {
+  margin-bottom: 2rem;
+}
+
+.day-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+  /* background-color: #edf2f7; */
+  background-color: #D32F2F;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* タイムライン */
+.timeline {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background-color: #e2e8f0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.25rem;
+  top: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  /* background-color: #3182ce; */
+  background-color: #D32F2F;
+}
+
+.timeline-time {
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content {
+  color: #4a5568;
+}
+
+.timeline-content strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* 追加オプション */
+.extra-options {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #f0c1c0;
+  border-radius: 8px;
+  color: #4a5568;
+}
+
+/* お申込みおよびお支払いの流れ */
+.flow-chart {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .flow-item {
+      display: flex;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .flow-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 2rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .flow-blue {
+      background-color: #f0c1c0;
+    }
+    
+    .flow-yellow {
+      background-color: #f06560;
+    }
+    
+    .icon-img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+    }
+    
+    .flow-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .flow-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    
+    .flow-description {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+    
+    /* .connector {
+      position: absolute;
+      left: 60px;
+      top: 120px;
+      width: 80px;
+      height: 70px;
+      z-index: -1;
+    } */
+    
+    .cta-button {
+      background-color: #D32F2F;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin: 3rem auto 1rem;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      max-width: 300px;
+    }
+    
+    .cta-button:hover {
+      background-color: #D84646;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .organizer-info {
+      margin-top: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .info-box {
+      flex: 1;
+      min-width: 300px;
+      padding: 1.5rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .info-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      /* color: #4a5568; */
+    }
+    
+    .info-box p {
+      margin: 0.5rem 0;
+      font-size: 0.875rem;
+    }
+    
+    .notice {
+      text-align: center;
+      margin: 2rem auto;
+      font-size: 0.875rem;
+      color: #4a5568;
+    }
+    
+    @media (max-width: 768px) {
+      .flow-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .flow-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      
+      .connector {
+        left: 60px;
+        height: 90px;
+      }
+    }
+
+/* 運営情報 */
+/* .organizer-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.organizer, 
+.travel-agency {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.organizer h3,
+.travel-agency h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.organizer p,
+.travel-agency p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+} */
+
+/* .notice {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fefcbf;
+  border-radius: 8px;
+  max-width: 600px;
+} */
+
+/* .notice p {
+  margin: 0.5rem 0;
+} */
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .timeline {
+    margin-left: 0;
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item::before {
+    left: -1.75rem;
+  }
+  
+  .organizer-info {
+    flex-direction: column;
+  }
+  
+  .organizer, 
+  .travel-agency {
+    width: 100%;
+  }
+  
+  .qr-code {
+    flex-direction: column;
+  }
+  
+  .qr-code p {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+  
+  /* Responsive */
+  @media (max-width: 767px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .card-description {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .courses-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .courses-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero-title {
+      font-size: 4rem;
+    }
+  }
