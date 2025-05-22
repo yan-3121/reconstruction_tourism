@@ -446,6 +446,10 @@
       font-size: 0.875rem;
       color: #4a5568;
     }
+
+    #inquiry-step {
+    scroll-margin-top: 400px; /* この値を調整して、表示位置を希望の高さに調整 */
+    }
     
     @media (max-width: 768px) {
       .flow-item {
