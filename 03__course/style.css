@@ -163,13 +163,34 @@ body {
   gap: 2rem;
   margin-top: 2rem;
 }
-
+/* ギャラリーアイテムのスタイル */
 .gallery-item {
   background-color: white;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s;
+  position: relative;
+}
+
+/* ウルトラの父の画像の親要素に相対位置を設定 */
+.gallery-item.ultraman-father {
+  position: relative;
+}
+
+/* ウルトラの父の画像にのみ著作権表記を追加 */
+.gallery-item.ultraman-father::after {
+  content: "©円谷プロ";
+  position: absolute;
+  top: 165px; /* 画像の高さ200pxから16px上（右下角に配置） */
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  z-index: 1;
 }
 
 .gallery-item:hover {
